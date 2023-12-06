@@ -1,5 +1,5 @@
 TN:
-SF:src/add.js
+SF:src\add.js
 FNF:0
 FNH:0
 DA:1,1
@@ -28,7 +28,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:src/isSymbol.js
+SF:src\isSymbol.js
 FN:18,isSymbol
 FNF:1
 FNH:0
@@ -63,7 +63,7 @@ BRF:1
 BRH:1
 end_of_record
 TN:
-SF:src/.internal/baseToNumber.js
+SF:src\.internal\baseToNumber.js
 FN:14,baseToNumber
 FNF:1
 FNH:1
@@ -101,7 +101,7 @@ BRF:3
 BRH:2
 end_of_record
 TN:
-SF:src/.internal/baseToString.js
+SF:src\.internal\baseToString.js
 FN:17,baseToString
 FNF:1
 FNH:0
@@ -146,7 +146,7 @@ BRF:1
 BRH:1
 end_of_record
 TN:
-SF:src/.internal/createMathOperation.js
+SF:src\.internal\createMathOperation.js
 FN:12,createMathOperation
 FNF:1
 FNH:1
@@ -200,7 +200,7 @@ BRF:8
 BRH:3
 end_of_record
 TN:
-SF:src/.internal/getTag.js
+SF:src\.internal\getTag.js
 FN:10,getTag
 FNF:1
 FNH:0
