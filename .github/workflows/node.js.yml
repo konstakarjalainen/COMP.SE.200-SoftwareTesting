@@ -19,9 +19,10 @@ jobs:
       with:
         node-version: 16.x
 
-    - name: npm install, npm run coverage
+    - name: npm install, npm test, npm run coverage
       run: |
         npm install
+        npm test
         npm run coverage
 
     - name: Coveralls
