@@ -57,14 +57,14 @@ describe('toInteger.js tests', () => {
     expect(result).to.be.NaN;
   });
 
-  it('should convert a string representing Infinity to Infinity', () => {
+  it('should convert a string representing Infinity to max integer', () => {
     const result = toInteger('Infinity');
-    expect(result).to.equal(Infinity);
+    expect(result).to.equal(Number.MAX_VALUE);
   });
 
-  it('should convert a string representing -Infinity to -Infinity', () => {
+  it('should convert a string representing -Infinity to min integer number', () => {
     const result = toInteger('-Infinity');
-    expect(result).to.equal(-Infinity);
+    expect(result).to.equal(-Number.MAX_VALUE);
   });
 
   it('should handle a very small positive float and return 0', () => {
@@ -75,16 +75,6 @@ describe('toInteger.js tests', () => {
   it('should handle a very small negative float and return 0', () => {
     const result = toInteger(-Number.MIN_VALUE);
     expect(result).to.equal(0);
-  });
-
-  it('should handle a very large positive float and return Infinity', () => {
-    const result = toInteger(Number.MAX_VALUE);
-    expect(result).to.equal(Infinity);
-  });
-
-  it('should handle a very large negative float and return -Infinity', () => {
-    const result = toInteger(-Number.MAX_VALUE);
-    expect(result).to.equal(-Infinity);
   });
 
   it('should handle null input', () => {

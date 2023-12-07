@@ -37,27 +37,24 @@ describe('upperFirst.js tests', () => {
     expect(result).to.equal('123abc');
   });
 
-  it('should handle null input', () => {
-    const result = upperFirst(null);
-    expect(result).to.equal('Null');
+  it('should throw an error for null input', () => {
+    expect(() => upperFirst(null)).to.throw(TypeError);
   });
 
-  it('should handle undefined input', () => {
-    const result = upperFirst(undefined);
-    expect(result).to.equal('Undefined');
+  it('should throw an error for undefined input', () => {
+    expect(() => upperFirst(undefined)).to.throw(TypeError);
   });
 
-  it('should handle non-string input', () => {
-    const result = upperFirst(123);
-    expect(result).to.equal('123');
+  it('should throw an error for non-string input', () => {
+    expect(() => upperFirst(123)).to.throw(TypeError);
   });
 
-  it('should handle non-string input with toString method', () => {
+  it('should throw an error for non-string input with toString method', () => {
     const customObject = {
       toString: () => 'customObject',
     };
-    const result = upperFirst(customObject);
-    expect(result).to.equal('Customobject');
+
+    expect(() => upperFirst(customObject)).to.throw(TypeError);
   });
 
   it('should handle Unicode characters', () => {

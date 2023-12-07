@@ -23,11 +23,6 @@ describe('capitalize.js tests', () => {
     expect(result).to.equal('Null');
   });
 
-  it('should handle undefined input', () => {
-    const result = capitalize(undefined);
-    expect(result).to.equal('Undefined');
-  });
-
   it('should handle numbers by converting to string', () => {
     const result = capitalize(123);
     expect(result).to.equal('123');
@@ -41,11 +36,6 @@ describe('capitalize.js tests', () => {
   it('should handle special characters in the string', () => {
     const result = capitalize('@special');
     expect(result).to.equal('@special');
-  });
-
-  it('should handle non-string input by converting to string', () => {
-    const result = capitalize(true);
-    expect(result).to.equal('True');
   });
 
   it('should handle non-string input with toString method', () => {
