@@ -73,8 +73,8 @@ describe('toNumber.js tests', () => {
   });
 
   it('should convert a string representing an octal number to a number', () => {
-    const result = toNumber('0o765');
-    expect(result).to.equal(509);
+    const result = toNumber('0o72');
+    expect(result).to.equal(58);
   });
 
   it('should convert a string representing a bad hexadecimal number to NaN', () => {
@@ -89,7 +89,7 @@ describe('toNumber.js tests', () => {
 
   it('should handle undefined input', () => {
     const result = toNumber(undefined);
-    expect(result).to.equal(NaN);
+    expect(result).to.be.NaN;
   });
 
   it('should handle a symbol input', () => {

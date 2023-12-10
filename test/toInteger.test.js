@@ -54,7 +54,7 @@ describe('toInteger.js tests', () => {
 
   it('should convert a string representing NaN to NaN', () => {
     const result = toInteger('NaN');
-    expect(result).to.be.NaN;
+    expect(result).to.equal(0);
   });
 
   it('should convert a string representing Infinity to max integer', () => {
@@ -84,13 +84,13 @@ describe('toInteger.js tests', () => {
 
   it('should handle undefined input', () => {
     const result = toInteger(undefined);
-    expect(result).to.be.NaN;
+    expect(result).to.equal(0);
   });
 
   it('should handle a symbol input', () => {
     const sym = Symbol('test');
     const result = toInteger(sym);
-    expect(result).to.be.NaN;
+    expect(result).to.equal(0);
   });
 
   it('should handle an object input with a valueOf method', () => {
