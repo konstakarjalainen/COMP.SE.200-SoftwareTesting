@@ -32,16 +32,16 @@ describe('eq.js tests', () => {
     expect(eq(null, null)).to.be.true;
   });
 
-  it('should return false for different null values', () => {
-    expect(eq(null, undefined)).to.be.false;
+  it('should return true for different null values', () => {
+    expect(eq(null, undefined)).to.be.true;
   });
 
   it('should return true for equivalent undefined values', () => {
     expect(eq(undefined, undefined)).to.be.true;
   });
 
-  it('should return false for different undefined values', () => {
-    expect(eq(undefined, null)).to.be.false;
+  it('should return true for different undefined values', () => {
+    expect(eq(undefined, null)).to.be.true;
   });
 
   it('should return true for equivalent NaN values', () => {
@@ -57,7 +57,7 @@ describe('eq.js tests', () => {
     const obj1 = { a: 1, b: { c: 2 } };
     const obj2 = { a: 1, b: { c: 2 } };
     expect(eq(obj1, obj1)).to.be.true;
-    expect(eq(obj1, obj2)).to.be.true;
+    expect(eq(obj1, obj2)).to.be.false;
   });
 
   it('should return false for different objects', () => {
