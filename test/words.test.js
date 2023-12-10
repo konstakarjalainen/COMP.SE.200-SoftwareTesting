@@ -18,18 +18,18 @@ describe('words.js tests', () => {
   });
 
   it('should handle a string with no spaces or separators', () => {
-    const result = words('abc123');
-    expect(result).to.deep.equal(['abc123']);
+    const result = words('abc');
+    expect(result).to.deep.equal(['abc']);
   });
 
-  it('should handle a string with spaces', () => {
-    const result = words('  word1   word2  ');
-    expect(result).to.deep.equal(['word1', 'word2']);
+  it('should handle a string with numbers and letters', () => {
+    const result = words('word1 word');
+    expect(result).to.deep.equal(['word', '1', 'word']);
   });
 
   it('should handle a string with leading and trailing spaces', () => {
-    const result = words('  word1   word2  ');
-    expect(result).to.deep.equal(['word1', 'word2']);
+    const result = words('  word   another  ');
+    expect(result).to.deep.equal(['word', 'another']);
   });
 
   it('should handle a string with Unicode characters', () => {
@@ -53,7 +53,7 @@ describe('words.js tests', () => {
   });
 
   it('should handle a custom pattern with no matches', () => {
-    const result = words('abc123', /[^xyz]+/g);
+    const result = words('abc', /[^xyz]+/g);
     expect(result).to.deep.equal([]);
   });
 });
