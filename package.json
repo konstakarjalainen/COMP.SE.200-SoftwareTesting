@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "mocha ./test/*.test.js",
-    "coverage": "c8 --reporter=lcov --exclude=./src/.internal npm test || true && npx codecov"
+    "coverage": "c8 --reporter=lcov --exclude=src/.internal/**/* npm test || true && npx codecov"
   },
   "author": "",
   "license": "MIT",
